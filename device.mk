@@ -82,10 +82,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
-# Vulkan
-PRODUCT_PACKAGES += \
-    libvulkan
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -147,6 +143,13 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
+
+# Overlays - override vendor ones
+PRODUCT_PACKAGES += \
+    FrameworksResCommon \
+    FrameworksResTarget \
+    DevicesOverlay \
+    DevicesAndroidOverlay
 
 # Power
 PRODUCT_PACKAGES += \
@@ -215,19 +218,10 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/vendor-overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION))
 
 PRODUCT_PACKAGES += \
-    AospFrameworkResOverlay \
-    AospWifiResOverlay \
-    CarrierConfigResCommon \
-    CellBroadcastReceiverResCommon \
-    FrameworksResCommon \
-    FrameworksResTarget \
-    GmsTelecommOverlay \
-    GmsTelephonyOverlay \
     NotchBarKiller \
-    SystemUIResCommon \
-    TelecommResCommon \
     TelephonyResCommon \
-    WifiResCommon
+    TetheringOverlay \
+    WifiOverlay
 
 -include $(LOCAL_PATH)/product_prop.mk
 -include $(LOCAL_PATH)/system_prop.mk

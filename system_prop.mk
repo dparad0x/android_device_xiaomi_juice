@@ -1,5 +1,5 @@
 # IMS
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.ims_volte_enable=1 \
     persist.dbg.vt_avail_ovr=1 \
@@ -9,7 +9,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.calls.on.ims=1
 
 # Bluetooth
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     persist.bt.enableAptXHD=true \
     persist.vendor.bt.a2dp.aac_whitelist=false \
     persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac \
@@ -22,7 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.bluetooth.soc=cherokee
 
 # Dex
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
    pm.dexopt.ab-ota=extract \
    pm.dexopt.install=speed-profile \
    pm.dexopt.boot=extract \
@@ -39,34 +39,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
    dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 
 # Netflix custom property
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     ro.netflix.bsp_rev=Q6115-31409-1
 
 # RIL
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.fflag.override.settings_provider_model=false
 
 # System
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.binary_xml=false
 
 # ZRAM
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     ro.zram.mark_idle_delay_mins=60 \
     ro.zram.first_wb_delay_mins=1440 \
     ro.zram.periodic_wb_delay_hours=24
 
 # Zygote
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
 
 # Charger
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES+= \
     ro.charger.enable_suspend=true \
     persist.vendor.quick.charge=1
 
 # vendor
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE \
     persist.vendor.ssr.enable_ramdumps=1 \
     persist.vendor.ims.disableADBLogs=1 \

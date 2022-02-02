@@ -1,15 +1,9 @@
-# Blur
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.sf.disable_blurs=1 \
-    ro.surface_flinger.supports_background_blur=0 \
-    ro.sf.blurs_are_expensive=0
-
 # Dex2oat
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
 
 # DRM
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     drm.service.enabled=true
 
 # Graphics
@@ -34,16 +28,16 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.hardware.vulkan=adreno
 
 # IORap
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
 # Media
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.media_vol_steps=15 \
     vendor.audio.offload.buffer.size.kb=256
 
 # Power-saving props
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.vendor.use_data_netmgrd=true \
     ro.vold.umsdirtyratio=20 \
     ro.ril.disable.power.collapse=0 \
