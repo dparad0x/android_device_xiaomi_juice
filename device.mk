@@ -71,10 +71,6 @@ PRODUCT_PACKAGES += \
    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
    vendor.qti.hardware.btconfigstore@1.0.vendor
 
-# GCam-Go
-PRODUCT_PACKAGES += \
-    GCam
-
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \
@@ -172,10 +168,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.2.vendor
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
 
 # Sensors
 PRODUCT_PACKAGES += \

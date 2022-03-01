@@ -11,4 +11,4 @@ LOCAL_SDK_VERSION := current
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/overlay/
 
-include $(BUILD_PACKAGE) s
+include $(BUILD_PACKAGE)
