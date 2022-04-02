@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
    vendor.qti.hardware.btconfigstore@1.0.vendor
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \
@@ -81,6 +85,11 @@ PRODUCT_PACKAGES += \
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    qcom.fmradio
 
 # Fstab
 PRODUCT_COPY_FILES += \
@@ -125,7 +134,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_juice
+    android.hardware.lights-service-qti
 
 # Netd
 PRODUCT_PACKAGES += \
@@ -142,16 +151,14 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
-    FrameworksResCommon \
-    FrameworksResTarget \
+    DevicesAndroidOverlay \
     DevicesOverlay \
-    DevicesAndroidOverlay
+    FrameworksResCommon \
+    FrameworksResTarget
 
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.qti \
-    vendor.qti.hardware.perf@2.0 \
-    vendor.qti.hardware.perf@2.1 \
     vendor.qti.hardware.perf@2.2
 
 # Properties
